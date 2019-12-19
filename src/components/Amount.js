@@ -1,12 +1,15 @@
 import React, { useState } from "react";
+import { withRouter } from "react-router-dom";
 
-const Amount = () => {
+const Amount = props => {
   const [amount, setAmount] = useState(0);
 
   const onChange = e => setAmount(e.target.value);
 
   const onSubmit = e => {
     e.preventDefault();
+
+    props.history.push("/foolnames");
   };
 
   return (
@@ -22,4 +25,4 @@ const Amount = () => {
   );
 };
 
-export default Amount;
+export default withRouter(Amount);
