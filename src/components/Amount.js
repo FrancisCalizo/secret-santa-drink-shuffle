@@ -25,7 +25,7 @@ const Amount = props => {
         />
       </label>
       <div>
-        <input type="submit" value="Begin" />
+        <input type="submit" value="I have spoken" />
       </div>
     </form>
   );

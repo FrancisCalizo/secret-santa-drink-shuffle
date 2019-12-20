@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Amount from "./components/Amount";
 import Fools from "./components/Fools";
+import Results from "./components/Results";
 import "./App.css";
 
 const App = props => {
@@ -26,6 +27,7 @@ const App = props => {
             path="/foolnames"
             render={() => <Fools amount={amount} />}
           />
+          <Route exact path="/santaresults" render={() => <Results />} />
         </Switch>
       </div>
     </Router>
