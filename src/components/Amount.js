@@ -11,6 +11,7 @@ const Amount = props => {
       props.history.push("/foolnames");
     }
   };
+
   return (
     <form onSubmit={submitAmount}>
       <label>

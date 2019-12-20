@@ -21,7 +21,11 @@ const App = props => {
               <Amount handleAmount={handleAmount} amount={amount} />
             )}
           />
-          <Route exact path="/foolnames" component={Fools} />
+          <Route
+            exact
+            path="/foolnames"
+            render={() => <Fools amount={amount} />}
+          />
         </Switch>
       </div>
     </Router>
