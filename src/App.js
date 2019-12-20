@@ -17,7 +17,7 @@ const App = props => {
           <Route
             exact
             path="/"
-            component={() => (
+            render={() => (
               <Amount handleAmount={handleAmount} amount={amount} />
             )}
           />
