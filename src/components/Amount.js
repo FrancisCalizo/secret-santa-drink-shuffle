@@ -1,22 +1,27 @@
-import React, { useState } from "react";
+import React from "react";
 import { withRouter } from "react-router-dom";
 
 const Amount = props => {
-  const [amount, setAmount] = useState(0);
-
-  const onChange = e => setAmount(e.target.value);
-
-  const onSubmit = e => {
+  const submitAmount = e => {
     e.preventDefault();
 
-    props.history.push("/foolnames");
+    if (Number(props.amount) < 1) {
+      alert("Input a Number you bafoon");
+    } else {
+      props.history.push("/foolnames");
+    }
   };
-
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={submitAmount}>
       <label>
         Amount of Fools:
-        <input type="number" name="amount" min="0" onChange={onChange} />
+        <input
+          type="number"
+          name="amount"
+          min="0"
+          onChange={props.handleAmount}
+          value={props.amount}
+        />
       </label>
       <div>
         <input type="submit" value="Begin" />
