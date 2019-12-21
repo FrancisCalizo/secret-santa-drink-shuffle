@@ -33,7 +33,7 @@ const App = props => {
           <Route
             exact
             path="/santaresults"
-            render={() => <Results fools={fools} />}
+            render={() => <Results fools={fools} amount={amount} />}
           />
         </Switch>
       </div>
