@@ -1,7 +1,16 @@
-import React from "react";
-import FoolItem from "./FoolItem";
+import React, { useState } from 'react';
+import FoolItem from './FoolItem';
 
 const Fools = ({ amount }) => {
+  const [fools, setFools] = useState([]);
+
+  const handleFools = (number, e) => {
+    let arr = [...fools];
+    arr[number] = e.target.value;
+
+    setFools(arr);
+  };
+
   const submitFools = e => {
     e.preventDefault();
   };
@@ -12,7 +21,7 @@ const Fools = ({ amount }) => {
         {Array(Number(amount))
           .fill()
           .map((num, idx) => (
-            <FoolItem key={idx} number={idx + 1} />
+            <FoolItem key={idx} number={idx} handleFools={handleFools} />
           ))}
         <div>
           <input type="submit" value="This is the way" />

@@ -7,3 +7,7 @@
 <b>Avoid re-render onChange in Input box using React-Router</b> - https://stackoverflow.com/questions/52529056/react-router-render-prop-route-always-re-renders-components
 
 <b>Array Fill to "Map" with having a number iteral instead of an array length </b> - https://stackoverflow.com/questions/12491101/javascript-create-array-from-for-loop
+
+<b>Passing an additional parameter onChange and using arrow function instead of calling immediately</b> - https://stackoverflow.com/questions/44917513/passing-an-additional-parameter-with-an-onchange-event
+
+<b>Looping through text inputs in react</b> - https://stackoverflow.com/questions/41841610/looping-through-text-inputs-in-react

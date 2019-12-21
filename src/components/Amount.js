@@ -1,14 +1,14 @@
-import React from "react";
-import { withRouter } from "react-router-dom";
+import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 const Amount = props => {
   const submitAmount = e => {
     e.preventDefault();
 
     if (Number(props.amount) < 1) {
-      alert("Input a Number you bafoon");
+      alert('Input a Number you bafoon');
     } else {
-      props.history.push("/foolnames");
+      props.history.push('/foolnames');
     }
   };
 

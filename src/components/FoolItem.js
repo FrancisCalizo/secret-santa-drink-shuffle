@@ -1,25 +1,14 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-const FoolItem = ({ number }) => {
-  const [fools, setFools] = useState([]);
-
-  const handleFools = e => {
-    let arr = [...fools];
-    arr[number] = e.target.value;
-
-    setFools(arr);
-  };
-
+const FoolItem = ({ number, handleFools }) => {
   return (
     <div>
       <label>
-        Fool #{number}
-        <input type="name" name="fool" onChange={handleFools} />
+        Fool #{number + 1}
+        <input type="name" name="fool" onChange={e => handleFools(number, e)} />
       </label>
     </div>
   );
 };
 
 export default FoolItem;
-
-// https://stackoverflow.com/questions/41841610/looping-through-text-inputs-in-react
