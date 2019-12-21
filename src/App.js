@@ -19,18 +19,22 @@ const App = props => {
           <Route
             exact
             path="/"
-            render={() => (
+            render={({ history }, props) => (
               <Amount handleAmount={handleAmount} amount={amount} />
             )}
           />
           <Route
             exact
             path="/foolnames"
-            render={() => (
+            render={({ history }, props) => (
               <Fools amount={amount} fools={fools} setFools={setFools} />
             )}
           />
-          <Route exact path="/santaresults" render={() => <Results />} />
+          <Route
+            exact
+            path="/santaresults"
+            render={() => <Results fools={fools} />}
+          />
         </Switch>
       </div>
     </Router>

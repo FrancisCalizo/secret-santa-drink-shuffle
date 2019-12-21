@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import FoolItem from './FoolItem';
+import { withRouter } from 'react-router-dom';
 
-const Fools = ({ amount, fools, setFools }) => {
+const Fools = ({ amount, fools, setFools, history }) => {
   const handleFools = (number, e) => {
     let arr = [...fools];
     arr[number] = e.target.value;
@@ -12,7 +13,7 @@ const Fools = ({ amount, fools, setFools }) => {
   const submitFools = e => {
     e.preventDefault();
 
-    props.history.push('/results');
+    history.push('/santaresults');
   };
 
   return (
@@ -31,4 +32,4 @@ const Fools = ({ amount, fools, setFools }) => {
   );
 };
 
-export default Fools;
+export default withRouter(Fools);

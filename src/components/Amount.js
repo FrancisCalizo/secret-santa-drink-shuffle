@@ -1,14 +1,14 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
-const Amount = props => {
+const Amount = ({ history, amount, handleAmount }) => {
   const submitAmount = e => {
     e.preventDefault();
 
-    if (Number(props.amount) < 1) {
+    if (Number(amount) < 1) {
       alert('Input a Number you bafoon');
     } else {
-      props.history.push('/foolnames');
+      history.push('/foolnames');
     }
   };
 
@@ -20,8 +20,8 @@ const Amount = props => {
           type="number"
           name="amount"
           min="0"
-          onChange={props.handleAmount}
-          value={props.amount}
+          onChange={handleAmount}
+          value={amount}
         />
       </label>
       <div>

@@ -11,3 +11,5 @@
 <b>Passing an additional parameter onChange and using arrow function instead of calling immediately</b> - https://stackoverflow.com/questions/44917513/passing-an-additional-parameter-with-an-onchange-event
 
 <b>Looping through text inputs in react</b> - https://stackoverflow.com/questions/41841610/looping-through-text-inputs-in-react
+
+<b>Props history inside render method</b> - https://stackoverflow.com/questions/56073474/how-history-object-is-getting-evaluated-in-react
