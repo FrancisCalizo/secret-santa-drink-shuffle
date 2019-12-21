@@ -1,12 +1,13 @@
-import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Amount from "./components/Amount";
-import Fools from "./components/Fools";
-import Results from "./components/Results";
-import "./App.css";
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Amount from './components/Amount';
+import Fools from './components/Fools';
+import Results from './components/Results';
+import './App.css';
 
 const App = props => {
   const [amount, setAmount] = useState(0);
+  const [fools, setFools] = useState([]);
 
   const handleAmount = e => setAmount(e.target.value);
 
@@ -25,7 +26,9 @@ const App = props => {
           <Route
             exact
             path="/foolnames"
-            render={() => <Fools amount={amount} />}
+            render={() => (
+              <Fools amount={amount} fools={fools} setFools={setFools} />
+            )}
           />
           <Route exact path="/santaresults" render={() => <Results />} />
         </Switch>

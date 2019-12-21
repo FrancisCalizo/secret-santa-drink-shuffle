@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import FoolItem from './FoolItem';
 
-const Fools = ({ amount }) => {
-  const [fools, setFools] = useState([]);
-
+const Fools = ({ amount, fools, setFools }) => {
   const handleFools = (number, e) => {
     let arr = [...fools];
     arr[number] = e.target.value;
@@ -13,6 +11,8 @@ const Fools = ({ amount }) => {
 
   const submitFools = e => {
     e.preventDefault();
+
+    props.history.push('/results');
   };
 
   return (
