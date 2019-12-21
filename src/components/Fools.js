@@ -1,5 +1,6 @@
 import React from 'react';
 import FoolItem from './FoolItem';
+import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 
 const Fools = ({ amount, fools, setFools, history }) => {
@@ -30,6 +31,12 @@ const Fools = ({ amount, fools, setFools, history }) => {
       </form>
     </div>
   );
+};
+
+Fools.propTypes = {
+  amount: PropTypes.string.isRequired,
+  fools: PropTypes.array.isRequired,
+  setFools: PropTypes.func.isRequired
 };
 
 export default withRouter(Fools);

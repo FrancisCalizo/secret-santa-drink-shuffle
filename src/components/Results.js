@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 const Results = ({ amount, fools }) => {
   const [order, setOrder] = useState([]);
@@ -6,8 +7,8 @@ const Results = ({ amount, fools }) => {
   useEffect(() => {
     let numbers = [];
 
-    while (numbers.length < amount) {
-      let num = Math.floor(Math.random() * amount) + 1;
+    while (numbers.length < Number(amount)) {
+      let num = Math.floor(Math.random() * Number(amount)) + 1;
 
       if (!numbers.includes(num)) {
         numbers.push(num);
@@ -32,6 +33,11 @@ const Results = ({ amount, fools }) => {
       })}
     </div>
   );
+};
+
+Results.propTypes = {
+  amount: PropTypes.string.isRequired,
+  fools: PropTypes.array.isRequired
 };
 
 export default Results;

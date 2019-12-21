@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const FoolItem = ({ number, handleFools }) => {
   return (
@@ -9,6 +10,11 @@ const FoolItem = ({ number, handleFools }) => {
       </label>
     </div>
   );
+};
+
+FoolItem.propTypes = {
+  number: PropTypes.number.isRequired,
+  handleFools: PropTypes.func.isRequired
 };
 
 export default FoolItem;

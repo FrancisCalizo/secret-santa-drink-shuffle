@@ -6,7 +6,7 @@ import Results from './components/Results';
 import './App.css';
 
 const App = props => {
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState('0');
   const [fools, setFools] = useState([]);
 
   const handleAmount = e => setAmount(e.target.value);
