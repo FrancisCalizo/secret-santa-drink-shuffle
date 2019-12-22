@@ -15,3 +15,6 @@
 <b>Props history inside render method</b> - https://stackoverflow.com/questions/56073474/how-history-object-is-getting-evaluated-in-react
 
 <b> Use of require to load images in img tag </b> - https://stackoverflow.com/questions/34582405/react-wont-load-local-images
+
+<b>Skewed Backgrounds</b> - https://codepen.io/search/pens?q=skewed+background
+and https://codepen.io/michellebarker/post/experimental-layouts-with-css-shapes-and-clip-path

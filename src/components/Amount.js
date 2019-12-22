@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import { useEffect } from 'react';
+import DrunkSanta from './DrunkSanta';
 
 const Amount = ({ history, amount, setAmount, handleAmount }) => {
   useEffect(() => {
@@ -20,23 +21,25 @@ const Amount = ({ history, amount, setAmount, handleAmount }) => {
   };
 
   return (
-    <div>
-      <img src={require('../drunk-santa.png')} alt="drunk-santa" />
-      <form onSubmit={submitAmount}>
-        <label>
-          Amount of Fools:
-          <input
-            type="number"
-            name="amount"
-            min="0"
-            onChange={handleAmount}
-            value={Number(amount)}
-          />
-        </label>
-        <div>
-          <input type="submit" value="I have spoken" />
-        </div>
-      </form>
+    <div className="sec1">
+      <DrunkSanta />
+      <div className="sec2">
+        <form onSubmit={submitAmount} id="amount-submit">
+          <label>
+            Amount of Fools:
+            <input
+              type="number"
+              name="amount"
+              min="0"
+              onChange={handleAmount}
+              value={Number(amount)}
+            />
+          </label>
+          <div>
+            <input type="submit" value="I have spoken" />
+          </div>
+        </form>
+      </div>
     </div>
   );
 };

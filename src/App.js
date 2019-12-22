@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Nav from './components/Nav';
+import Navbar from './components/Navbar';
 import Amount from './components/Amount';
 import Fools from './components/Fools';
 import Results from './components/Results';
@@ -14,34 +14,32 @@ const App = props => {
 
   return (
     <Router>
-      <div className="container">
-        <Nav />
-        <Switch>
-          <Route
-            exact
-            path="/"
-            render={({ history }, props) => (
-              <Amount
-                handleAmount={handleAmount}
-                amount={amount}
-                setAmount={setAmount}
-              />
-            )}
-          />
-          <Route
-            exact
-            path="/foolnames"
-            render={({ history }, props) => (
-              <Fools amount={amount} fools={fools} setFools={setFools} />
-            )}
-          />
-          <Route
-            exact
-            path="/santaresults"
-            render={() => <Results fools={fools} amount={amount} />}
-          />
-        </Switch>
-      </div>
+      <Navbar />
+      <Switch>
+        <Route
+          exact
+          path="/"
+          render={({ history }, props) => (
+            <Amount
+              handleAmount={handleAmount}
+              amount={amount}
+              setAmount={setAmount}
+            />
+          )}
+        />
+        <Route
+          exact
+          path="/foolnames"
+          render={({ history }, props) => (
+            <Fools amount={amount} fools={fools} setFools={setFools} />
+          )}
+        />
+        <Route
+          exact
+          path="/santaresults"
+          render={() => <Results fools={fools} amount={amount} />}
+        />
+      </Switch>
     </Router>
   );
 };
