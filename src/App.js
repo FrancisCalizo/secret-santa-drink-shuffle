@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Nav from './components/Nav';
 import Amount from './components/Amount';
 import Fools from './components/Fools';
 import Results from './components/Results';
@@ -14,13 +15,17 @@ const App = props => {
   return (
     <Router>
       <div className="container">
-        <h1>The Secret Santa</h1>
+        <Nav />
         <Switch>
           <Route
             exact
             path="/"
             render={({ history }, props) => (
-              <Amount handleAmount={handleAmount} amount={amount} />
+              <Amount
+                handleAmount={handleAmount}
+                amount={amount}
+                setAmount={setAmount}
+              />
             )}
           />
           <Route
