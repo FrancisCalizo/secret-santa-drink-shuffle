@@ -1,12 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom';
-import { useEffect } from 'react';
-import DrunkSanta from './DrunkSanta';
+import React from "react";
+import PropTypes from "prop-types";
+import { withRouter } from "react-router-dom";
+import { useEffect } from "react";
+import DrunkSanta from "./DrunkSanta";
 
 const Amount = ({ history, amount, setAmount, handleAmount }) => {
   useEffect(() => {
-    setAmount('0');
+    setAmount("0");
     // eslint-disable-next-line
   }, []);
 
@@ -14,11 +14,13 @@ const Amount = ({ history, amount, setAmount, handleAmount }) => {
     e.preventDefault();
 
     if (Number(amount) < 1) {
-      alert('Input a Number you bafoon');
+      alert("Input a Number you bafoon");
     } else {
-      history.push('/foolnames');
+      history.push("/foolnames");
     }
   };
+
+  const amountFocus = e => e.target.select();
 
   return (
     <div className="text-center">
@@ -32,6 +34,7 @@ const Amount = ({ history, amount, setAmount, handleAmount }) => {
                 type="number"
                 name="amount"
                 min="0"
+                onFocus={amountFocus}
                 onChange={handleAmount}
                 value={Number(amount)}
               />
