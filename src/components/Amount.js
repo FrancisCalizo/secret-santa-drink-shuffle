@@ -4,9 +4,10 @@ import { withRouter } from "react-router-dom";
 import { useEffect } from "react";
 import DrunkSanta from "./DrunkSanta";
 
-const Amount = ({ history, amount, setAmount, handleAmount }) => {
+const Amount = ({ history, amount, setAmount, handleAmount, setFools }) => {
   useEffect(() => {
     setAmount("0");
+    setFools([]);
     // eslint-disable-next-line
   }, []);
 

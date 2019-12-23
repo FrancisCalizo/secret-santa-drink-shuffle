@@ -21,7 +21,7 @@ const Results = ({ amount, fools }) => {
   }, []);
 
   return (
-    <div>
+    <div className="text-center">
       <Yoda />
       <h1>Results</h1>
       {fools.map((fool, idx) => {

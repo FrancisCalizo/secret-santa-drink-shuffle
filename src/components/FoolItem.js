@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const FoolItem = ({ number, handleFools }) => {
   return (
-    <div className="zero-auto">
+    <div>
       <input
         type="name"
         name="fool"
