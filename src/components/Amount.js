@@ -21,25 +21,31 @@ const Amount = ({ history, amount, setAmount, handleAmount }) => {
   };
 
   return (
-    <div className="sec1">
+    <div className="text-center">
       <DrunkSanta />
-      <div className="sec2">
-        <form onSubmit={submitAmount} id="amount-submit">
+      <form onSubmit={submitAmount}>
+        <div className="card amount-fools-card">
           <label>
-            Amount of Fools:
-            <input
-              type="number"
-              name="amount"
-              min="0"
-              onChange={handleAmount}
-              value={Number(amount)}
-            />
+            Fool Count:
+            <div>
+              <input
+                type="number"
+                name="amount"
+                min="0"
+                onChange={handleAmount}
+                value={Number(amount)}
+              />
+            </div>
           </label>
-          <div>
-            <input type="submit" value="I have spoken" />
-          </div>
-        </form>
-      </div>
+        </div>
+        <div>
+          <input
+            type="submit"
+            value="I have spoken."
+            className="btn btn-primary spoken"
+          />
+        </div>
+      </form>
     </div>
   );
 };

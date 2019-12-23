@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar = ({ icon, title }) => {
   return (
-    <nav className="navbar bg-primary">
+    <nav className="navbar bg-primary text-center">
       <ul>
         <li>
           <Link to="/">The Secret Santa</Link>
