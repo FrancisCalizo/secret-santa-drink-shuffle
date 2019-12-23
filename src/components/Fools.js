@@ -1,7 +1,8 @@
-import React from 'react';
-import FoolItem from './FoolItem';
-import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom';
+import React from "react";
+import FoolItem from "./FoolItem";
+import PropTypes from "prop-types";
+import { withRouter } from "react-router-dom";
+import Mando from "./Mando";
 
 const Fools = ({ amount, fools, setFools, history }) => {
   const handleFools = (number, e) => {
@@ -14,11 +15,12 @@ const Fools = ({ amount, fools, setFools, history }) => {
   const submitFools = e => {
     e.preventDefault();
 
-    history.push('/santaresults');
+    history.push("/santaresults");
   };
 
   return (
     <div>
+      <Mando />
       <form onSubmit={submitFools}>
         {Array(Number(amount))
           .fill()
