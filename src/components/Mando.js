@@ -1,10 +1,9 @@
 import React from "react";
-import mando from
 
 const Mando = () => {
   return (
     <div>
-      <img id="drunk-santa" src={require('')} alt="mando" />
+      <img id="mando" src={require("../final.png")} alt="mando" />
     </div>
   );
 };

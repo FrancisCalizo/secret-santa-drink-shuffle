@@ -309,6 +309,19 @@ img {
 }
 
 /* Forms */
+.form-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  overflow: hidden;
+  padding: 0 2rem;
+}
+
+.form-container h1,
+h2,
+h3 {
+  text-align: center;
+}
+
 input {
   margin: 1.2rem 0;
 }
@@ -420,6 +433,14 @@ table th {
   width: 20rem;
 }
 
+#mando {
+  width: 15rem;
+}
+
+#yoda {
+  width: 28rem;
+}
+
 .amount-fools-card {
   width: 200px;
   margin: 0 auto;
@@ -437,7 +458,8 @@ table th {
   border: none;
 }
 
-.spoken {
+.spoken,
+.the-way {
   font-size: 1.8rem;
   padding: 0.8rem 3rem;
   border-radius: 30px;
@@ -451,4 +473,13 @@ input[type="number"] {
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
+}
+
+.fool-input {
+  margin: 0.5rem;
+  display: block;
+  width: 95%;
+  padding: 0.6rem;
+  font-size: 1.4rem;
+  border: 1px solid #ccc;
 }

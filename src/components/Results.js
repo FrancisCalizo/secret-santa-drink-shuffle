@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
+import Yoda from "./Yoda";
 
 const Results = ({ amount, fools }) => {
   const [order, setOrder] = useState([]);
@@ -21,6 +22,7 @@ const Results = ({ amount, fools }) => {
 
   return (
     <div>
+      <Yoda />
       <h1>Results</h1>
       {fools.map((fool, idx) => {
         return (

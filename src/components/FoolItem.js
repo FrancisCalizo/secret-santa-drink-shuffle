@@ -1,13 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 const FoolItem = ({ number, handleFools }) => {
   return (
-    <div>
-      <label>
-        Fool #{number + 1}
-        <input type="name" name="fool" onChange={e => handleFools(number, e)} />
-      </label>
+    <div className="zero-auto">
+      <input
+        type="name"
+        name="fool"
+        onChange={e => handleFools(number, e)}
+        placeholder={`Fool #${number + 1}`}
+        className="fool-input"
+      />
     </div>
   );
 };
