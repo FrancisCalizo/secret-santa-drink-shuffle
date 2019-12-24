@@ -1,13 +1,14 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="navbar bg-primary text-center">
+    <nav className="navbar bg-light text-center">
       <ul>
         <li>
-          <Link to="/">Secret Santa</Link>
+          <Link to="/whiteelephant" style={{ color: "#000" }}>
+            White Elephant
+          </Link>
         </li>
       </ul>
     </nav>

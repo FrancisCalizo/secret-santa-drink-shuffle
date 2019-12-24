@@ -4,17 +4,21 @@ import Navbar from "./components/Navbar";
 import Amount from "./components/Amount";
 import Fools from "./components/Fools";
 import Results from "./components/Results";
+import WhiteElephant from "./components/WhiteElephant/Amount";
+import WhiteElephantNavbar from "./components/WhiteElephant/Navbar";
 import "./App.css";
 
 const App = props => {
   const [amount, setAmount] = useState("0");
   const [fools, setFools] = useState([]);
+  const [isWhiteElephant, setIsWhiteElephant] = useState(false);
 
   const handleAmount = e => setAmount(e.target.value);
 
   return (
     <Router>
-      <Navbar />
+      {/* <Navbar /> */}
+      {isWhiteElephant ? <WhiteElephantNavbar /> : <Navbar />}
       <Switch>
         <Route
           exact
@@ -25,6 +29,7 @@ const App = props => {
               amount={amount}
               setAmount={setAmount}
               setFools={setFools}
+              setIsWhiteElephant={setIsWhiteElephant}
             />
           )}
         />
@@ -39,6 +44,13 @@ const App = props => {
           exact
           path="/santaresults"
           render={() => <Results fools={fools} amount={amount} />}
+        />
+        <Route
+          exact
+          path="/whiteelephant"
+          render={() => (
+            <WhiteElephant setIsWhiteElephant={setIsWhiteElephant} />
+          )}
         />
       </Switch>
     </Router>

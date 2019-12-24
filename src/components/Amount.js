@@ -4,7 +4,14 @@ import { withRouter } from "react-router-dom";
 import { useEffect } from "react";
 import DrunkSanta from "./DrunkSanta";
 
-const Amount = ({ history, amount, setAmount, handleAmount, setFools }) => {
+const Amount = ({
+  history,
+  amount,
+  setAmount,
+  handleAmount,
+  setFools,
+  setIsWhiteElephant
+}) => {
   useEffect(() => {
     setAmount("0");
     setFools([]);
@@ -21,11 +28,16 @@ const Amount = ({ history, amount, setAmount, handleAmount, setFools }) => {
     }
   };
 
+  const handleGameChange = () => {
+    setIsWhiteElephant(true);
+    history.push("/whiteelephant");
+  };
+
   const amountFocus = e => e.target.select();
 
   return (
     <div className="text-center">
-      <DrunkSanta />
+      <DrunkSanta handleGameChange={handleGameChange} />
       <form onSubmit={submitAmount}>
         <div className="card amount-fools-card">
           <label>
