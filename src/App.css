@@ -472,6 +472,7 @@ table th {
 }
 
 .spoken {
+  -webkit-appearance: none;
   font-size: 1.2rem;
   padding: 0.6rem 3rem;
   width: 90%;
@@ -499,4 +500,11 @@ input::-webkit-inner-spin-button {
 .justify-center {
   justify-content: center;
   justify-items: center;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
 }
