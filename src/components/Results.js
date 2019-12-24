@@ -41,7 +41,9 @@ const Results = ({ amount, fools }) => {
           </div>
         );
       })}
-      <button onClick={handleRedo}>Redo</button>
+      <button onClick={handleRedo} className="btn btn-dark shuffle">
+        Redo
+      </button>
     </div>
   );
 };
