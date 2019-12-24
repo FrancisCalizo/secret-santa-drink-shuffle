@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import Yoda from "./Yoda";
 
@@ -41,9 +42,12 @@ const Results = ({ amount, fools }) => {
           </div>
         );
       })}
-      <button onClick={handleRedo} className="btn btn-dark shuffle">
-        Redo
+      <button onClick={handleRedo} className="btn btn-dark shuffle my-1">
+        Reshuffle
       </button>
+      <Link to="/" className="btn btn-primary shuffle my-1">
+        Play Again
+      </Link>
     </div>
   );
 };
