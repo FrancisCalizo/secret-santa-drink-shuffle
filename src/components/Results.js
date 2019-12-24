@@ -6,6 +6,15 @@ const Results = ({ amount, fools }) => {
   const [order, setOrder] = useState([]);
 
   useEffect(() => {
+    shuffle();
+    // eslint-disable-next-line
+  }, []);
+
+  const handleRedo = () => {
+    shuffle();
+  };
+
+  const shuffle = () => {
     let numbers = [];
 
     while (numbers.length < Number(amount)) {
@@ -17,13 +26,12 @@ const Results = ({ amount, fools }) => {
     }
 
     setOrder(numbers);
-    // eslint-disable-next-line
-  }, []);
+  };
 
   return (
     <div className="text-center">
       <Yoda />
-      <h1>Results</h1>
+      <h1 style={{ color: "#dc3545", fontSize: "3rem" }}>Results</h1>
       {fools.map((fool, idx) => {
         return (
           <div key={idx + 1}>
@@ -33,6 +41,7 @@ const Results = ({ amount, fools }) => {
           </div>
         );
       })}
+      <button onClick={handleRedo}>Redo</button>
     </div>
   );
 };

@@ -182,7 +182,7 @@ img {
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1rem;
+  grid-gap: 0.2rem;
 }
 
 .grid-3 {
@@ -398,7 +398,7 @@ table th {
     display: none;
   }
 
-  .grid-2,
+  /* .grid-2, */
   .grid-3,
   .grid-4 {
     grid-template-columns: 1fr;
@@ -481,5 +481,5 @@ input::-webkit-inner-spin-button {
   width: 95%;
   padding: 0.6rem;
   font-size: 1.4rem;
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
 }
