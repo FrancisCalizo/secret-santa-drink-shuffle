@@ -47,7 +47,7 @@ const Amount = ({ history, amount, setAmount, handleAmount, setFools }) => {
           <input
             type="submit"
             value="I have spoken."
-            className="btn btn-primary spoken"
+            className="btn-primary spoken"
           />
         </div>
       </form>

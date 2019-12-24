@@ -42,12 +42,14 @@ const Results = ({ amount, fools }) => {
           </div>
         );
       })}
-      <button onClick={handleRedo} className="btn btn-dark shuffle my-1">
-        Reshuffle
-      </button>
-      <Link to="/" className="btn btn-primary shuffle my-1">
-        Play Again
-      </Link>
+      <div className="grid-2 justify-center">
+        <button onClick={handleRedo} className="btn-dark shuffle my-1">
+          Reshuffle
+        </button>
+        <Link to="/" className="btn-primary shuffle my-1">
+          Play Again
+        </Link>
+      </div>
     </div>
   );
 };
