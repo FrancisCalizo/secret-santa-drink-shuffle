@@ -38,6 +38,7 @@ const Amount = ({ history, amount, setAmount, handleAmount, setFools }) => {
                 onFocus={amountFocus}
                 onChange={handleAmount}
                 value={Number(amount)}
+                style={{ margin: "0" }}
               />
             </div>
           </label>

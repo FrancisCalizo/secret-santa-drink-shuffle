@@ -430,7 +430,7 @@ table th {
 }
 
 #drunk-santa {
-  width: 20rem;
+  width: 19rem;
 }
 
 #mando {
@@ -438,12 +438,14 @@ table th {
 }
 
 #yoda {
-  width: 28rem;
+  width: 20rem;
 }
 
 .amount-fools-card {
-  width: 200px;
+  width: 90%;
   margin: 0 auto;
+  padding: 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .amount-fools-card label {
@@ -452,7 +454,7 @@ table th {
 }
 
 .amount-fools-card input[type="number"] {
-  font-size: 5rem;
+  font-size: 4rem;
   width: 6rem;
   text-align: center;
   border: none;
