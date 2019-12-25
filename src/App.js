@@ -1,19 +1,22 @@
-import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Amount from "./components/Amount";
-import Fools from "./components/Fools";
-import Results from "./components/Results";
-import WhiteElephant from "./components/WhiteElephant/Amount";
-import WhiteElephantNavbar from "./components/WhiteElephant/Navbar";
-import "./App.css";
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Amount from './components/Amount';
+import Fools from './components/Fools';
+import Results from './components/Results';
+import WhiteElephantAmount from './components/WhiteElephant/Amount';
+import WhiteElephantNavbar from './components/WhiteElephant/Navbar';
+import './App.css';
 
 const App = props => {
-  const [amount, setAmount] = useState("0");
+  const [amount, setAmount] = useState('0');
   const [fools, setFools] = useState([]);
   const [isWhiteElephant, setIsWhiteElephant] = useState(false);
+  const [elephantAmount, setElephantAmount] = useState('0');
+  const [jabronis, setJabronis] = useState([]);
 
   const handleAmount = e => setAmount(e.target.value);
+  const handleElephantAmount = e => setElephantAmount(e.target.value);
 
   return (
     <Router>
@@ -49,7 +52,13 @@ const App = props => {
           exact
           path="/whiteelephant"
           render={() => (
-            <WhiteElephant setIsWhiteElephant={setIsWhiteElephant} />
+            <WhiteElephantAmount
+              handleElephantAmount={handleElephantAmount}
+              setJabronis={setJabronis}
+              elephantAmount={elephantAmount}
+              setElephantAmount={setElephantAmount}
+              setIsWhiteElephant={setIsWhiteElephant}
+            />
           )}
         />
       </Switch>
