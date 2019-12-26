@@ -8,12 +8,10 @@ const Amount = ({
   elephantAmount,
   setElephantAmount,
   handleElephantAmount,
-  setJabronis,
   setIsWhiteElephant
 }) => {
   useEffect(() => {
     setElephantAmount('0');
-    setJabronis([]);
     // eslint-disable-next-line
   }, []);
 

@@ -6,6 +6,7 @@ import Fools from './components/Fools';
 import Results from './components/Results';
 import WhiteElephantAmount from './components/WhiteElephant/Amount';
 import WhiteElephantNavbar from './components/WhiteElephant/Navbar';
+import ElephantPicking from './components/WhiteElephant/ElephantPicking';
 import './App.css';
 
 const App = props => {
@@ -13,7 +14,6 @@ const App = props => {
   const [fools, setFools] = useState([]);
   const [isWhiteElephant, setIsWhiteElephant] = useState(false);
   const [elephantAmount, setElephantAmount] = useState('0');
-  const [jabronis, setJabronis] = useState([]);
 
   const handleAmount = e => setAmount(e.target.value);
   const handleElephantAmount = e => setElephantAmount(e.target.value);
@@ -54,12 +54,16 @@ const App = props => {
           render={() => (
             <WhiteElephantAmount
               handleElephantAmount={handleElephantAmount}
-              setJabronis={setJabronis}
               elephantAmount={elephantAmount}
               setElephantAmount={setElephantAmount}
               setIsWhiteElephant={setIsWhiteElephant}
             />
           )}
+        />
+        <Route
+          exact
+          path="/elephantpicking"
+          render={() => <ElephantPicking elephantAmount={elephantAmount} />}
         />
       </Switch>
     </Router>
