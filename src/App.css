@@ -118,6 +118,13 @@ img {
   margin: 0.7rem 0;
 }
 
+.card-shadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 1rem;
+  border: #ccc 1px dotted;
+  margin: 0.7rem 0;
+}
+
 /* List */
 .list {
   margin: 0.5rem 0;
@@ -409,10 +416,10 @@ table th {
   }
 
   /* .grid-2, */
-  .grid-3,
+  /* .grid-3,
   .grid-4 {
     grid-template-columns: 1fr;
-  }
+  } */
 
   /* Text Styles */
   .x-large {
@@ -518,4 +525,17 @@ select:focus,
 textarea:focus,
 button:focus {
   outline: none;
+}
+
+.sideous {
+  background-image: url("../src/sidious.jpg");
+  /* background-size: cover; */
+  background-position: 40% 50%;
+  background-size: 160%;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  color: #fff;
+  font-size: 2rem;
+  padding-top: 7.5rem;
 }
