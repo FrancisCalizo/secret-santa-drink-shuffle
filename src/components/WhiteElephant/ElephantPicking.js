@@ -1,6 +1,16 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
 
 const ElephantPicking = ({ elephantAmount }) => {
+  const [remaining, setRemaining] = useState([]);
+  const [taken, setTaken] = useState([]);
+
+  useEffect(() => {
+    setRemaining([...Array(Number(elephantAmount)).keys()].map(x => ++x));
+    // eslint-disable-next-line
+  }, []);
+
+  const onClick = () => {};
+
   return (
     <div className="text-center">
       <h1>Jabroni Count: {elephantAmount}</h1>
@@ -8,7 +18,7 @@ const ElephantPicking = ({ elephantAmount }) => {
         <div>Remaining</div>
         <div>Taken</div>
       </div>
-      <button>Hit me.</button>
+      <button onClick={onClick}>Dew it.</button>
     </div>
   );
 };

@@ -18,3 +18,5 @@
 
 <b>Skewed Backgrounds</b> - https://codepen.io/search/pens?q=skewed+background
 and https://codepen.io/michellebarker/post/experimental-layouts-with-css-shapes-and-clip-path
+
+<b> Create an Array of Numbers 1-N just from getting the value N </b> - https://stackoverflow.com/questions/3746725/how-to-create-an-array-containing-1-n

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -8,7 +8,7 @@ const Navbar = () => {
         <li>
           <Link
             to="/whiteelephant"
-            style={{ fontSize: '2.5rem', color: '#000' }}
+            style={{ fontSize: "2.5rem", color: "#FFF" }}
           >
             White Elephant
           </Link>

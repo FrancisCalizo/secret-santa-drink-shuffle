@@ -2,10 +2,10 @@ import React from "react";
 
 const WhiteElephant = ({ handleGameChange }) => {
   return (
-    <div className="my-3">
+    <div>
       <img
         id="white-elephant"
-        src={require("../../elephant.png")}
+        src={require("../../santa-dab.png")}
         alt="white-elephant"
         onClick={handleGameChange}
       />
