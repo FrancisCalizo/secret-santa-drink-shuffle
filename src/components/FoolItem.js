@@ -1,17 +1,17 @@
-import React from "react";
+import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 
 const FoolItem = ({ number, handleFools }) => {
   return (
-    <div>
+    <Fragment>
       <input
         type="name"
         name="fool"
         onChange={e => handleFools(number, e)}
-        placeholder={`Fool #${number + 1}`}
+        placeholder={`Fool #${number + 1} Name`}
         className="fool-input"
       />
-    </div>
+    </Fragment>
   );
 };
 
