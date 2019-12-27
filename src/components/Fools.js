@@ -21,12 +21,12 @@ const Fools = ({ amount, fools, setFools, history }) => {
   return (
     <div className="text-center">
       <Mando />
-      <h2>Names of Contestants</h2>
       <form onSubmit={submitFools}>
         <div
           className="card-shadow"
           style={{ width: "80%", marginLeft: "auto", marginRight: "auto" }}
         >
+          <h2>Names of Contestants</h2>
           {Array(Number(amount))
             .fill()
             .map((num, idx) => (

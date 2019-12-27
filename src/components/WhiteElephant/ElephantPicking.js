@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from 'react';
+import React, { useState, useEffect, Fragment } from "react";
 
 const ElephantPicking = ({ elephantAmount }) => {
   const [remaining, setRemaining] = useState([]);
@@ -11,17 +11,19 @@ const ElephantPicking = ({ elephantAmount }) => {
   }, []);
 
   const randomSelection = () => {
-    // Pick Random Number from Remaining
-    let randomIndex = Math.floor(Math.random() * Number(remaining.length));
-    let selected = remaining[randomIndex];
+    if (remaining.length !== 0) {
+      // Pick Random Number from Remaining
+      let randomIndex = Math.floor(Math.random() * Number(remaining.length));
+      let selected = remaining[randomIndex];
 
-    // Move that Number to Taken (setTaken)
-    setTaken([...taken, selected]);
+      // Move that Number to Taken (setTaken)
+      setTaken([...taken, selected]);
 
-    // Remove that Number from Remaining (setRemaining)
-    setRemaining(remaining.filter(num => num !== selected));
+      // Remove that Number from Remaining (setRemaining)
+      setRemaining(remaining.filter(num => num !== selected));
 
-    setChosenOne(selected);
+      setChosenOne(selected);
+    }
   };
 
   return (
@@ -32,9 +34,9 @@ const ElephantPicking = ({ elephantAmount }) => {
           <div
             className="card-shadow"
             style={{
-              width: '120px',
-              marginLeft: 'auto',
-              marginRight: 'auto'
+              width: "120px",
+              marginLeft: "auto",
+              marginRight: "auto"
             }}
           >
             <h1>#{chosenOne}</h1>
@@ -42,7 +44,7 @@ const ElephantPicking = ({ elephantAmount }) => {
         </div>
       )}
 
-      <h3 style={{ color: '#7f8c8d' }}>Press Palpatine to draw a number.</h3>
+      <h3 style={{ color: "#7f8c8d" }}>Press Palpatine to draw a number.</h3>
       <button onClick={randomSelection} className="sideous my-1">
         Dew it.
       </button>
@@ -54,7 +56,7 @@ const ElephantPicking = ({ elephantAmount }) => {
               <div
                 className="card-shadow"
                 key={idx}
-                style={{ background: '#2ecc71' }}
+                style={{ background: "#2ecc71" }}
               >
                 {num}
               </div>
@@ -68,7 +70,7 @@ const ElephantPicking = ({ elephantAmount }) => {
               <div
                 className="card-shadow"
                 key={idx}
-                style={{ background: '#e74c3c' }}
+                style={{ background: "#e74c3c" }}
               >
                 {num}
               </div>

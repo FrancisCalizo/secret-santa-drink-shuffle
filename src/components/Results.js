@@ -48,7 +48,8 @@ const Results = ({ amount, fools }) => {
           return (
             <div key={idx + 1}>
               <h2>
-                {fool} - {order[idx]}
+                <span style={{ color: "#dc3545" }}>{fool}</span> gets drink{" "}
+                <span style={{ color: "#2ecc71" }}>#{order[idx]}</span>
               </h2>
             </div>
           );
