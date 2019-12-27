@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from 'react';
 
 const ElephantPicking = ({ elephantAmount }) => {
   const [remaining, setRemaining] = useState([]);
@@ -26,19 +26,35 @@ const ElephantPicking = ({ elephantAmount }) => {
 
   return (
     <div className="text-center">
-      {chosenOne === 0 ? null : <h1>Drink #: {chosenOne} </h1>}
-      <button onClick={randomSelection} className="sideous">
+      {chosenOne === 0 ? null : (
+        <div>
+          <h2>You have been dealt drink</h2>
+          <div
+            className="card-shadow"
+            style={{
+              width: '120px',
+              marginLeft: 'auto',
+              marginRight: 'auto'
+            }}
+          >
+            <h1>#{chosenOne}</h1>
+          </div>
+        </div>
+      )}
+
+      <h3 style={{ color: '#7f8c8d' }}>Press Palpatine to draw a number.</h3>
+      <button onClick={randomSelection} className="sideous my-1">
         Dew it.
       </button>
       <div className="grid-2">
         <div className="card-shadow">
           <h2>Remaining</h2>
-          <div className="grid-4">
+          <div className="grid-2">
             {remaining.map((num, idx) => (
               <div
                 className="card-shadow"
                 key={idx}
-                style={{ background: "#2ecc71" }}
+                style={{ background: '#2ecc71' }}
               >
                 {num}
               </div>
@@ -47,12 +63,12 @@ const ElephantPicking = ({ elephantAmount }) => {
         </div>
         <div className="card-shadow">
           <h2>Taken</h2>
-          <div className="grid-4">
+          <div className="grid-2">
             {taken.map((num, idx) => (
               <div
                 className="card-shadow"
                 key={idx}
-                style={{ background: "#e74c3c" }}
+                style={{ background: '#e74c3c' }}
               >
                 {num}
               </div>
