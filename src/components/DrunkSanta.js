@@ -8,6 +8,7 @@ const DrunkSanta = ({ handleGameChange }) => {
         src={require("../drunk-santa.png")}
         alt="drunk-santa"
         onClick={handleGameChange}
+        style={{ cursor: "pointer" }}
       />
     </div>
   );

@@ -9,7 +9,7 @@ const Navbar = () => {
           <i className="fas fa-gift fa-2x"></i>
           <Link
             to="/whiteelephant"
-            style={{ fontSize: "1.8rem", color: "#FFF" }}
+            style={{ fontSize: "2.1rem", color: "#FFF" }}
           >
             White Elephant
           </Link>

@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom';
-import { useEffect } from 'react';
-import DrunkSanta from './DrunkSanta';
+import React from "react";
+import PropTypes from "prop-types";
+import { withRouter } from "react-router-dom";
+import { useEffect } from "react";
+import DrunkSanta from "./DrunkSanta";
 
 const Amount = ({
   history,
@@ -13,7 +13,7 @@ const Amount = ({
   setIsWhiteElephant
 }) => {
   useEffect(() => {
-    setAmount('0');
+    setAmount("0");
     setFools([]);
     // eslint-disable-next-line
   }, []);
@@ -22,21 +22,24 @@ const Amount = ({
     e.preventDefault();
 
     if (Number(amount) < 1) {
-      alert('Input a Number you bafoon');
+      alert("Input a Number you bafoon");
     } else {
-      history.push('/foolnames');
+      history.push("/foolnames");
     }
   };
 
   const handleGameChange = () => {
     setIsWhiteElephant(true);
-    history.push('/whiteelephant');
+    history.push("/whiteelephant");
   };
 
   const amountFocus = e => e.target.select();
 
   return (
     <div className="text-center">
+      <h6 style={{ marginTop: "1rem" }}>
+        Click Santa to change the game to White Elephant!
+      </h6>
       <DrunkSanta handleGameChange={handleGameChange} />
       <form onSubmit={submitAmount}>
         <div className="card amount-fools-card">
@@ -50,7 +53,7 @@ const Amount = ({
                 onFocus={amountFocus}
                 onChange={handleAmount}
                 value={Number(amount)}
-                style={{ margin: '0' }}
+                style={{ margin: "0" }}
               />
             </div>
           </label>

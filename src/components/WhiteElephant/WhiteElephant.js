@@ -8,6 +8,7 @@ const WhiteElephant = ({ handleGameChange }) => {
         src={require("../../santa-dab.png")}
         alt="white-elephant"
         onClick={handleGameChange}
+        style={{ cursor: "pointer" }}
       />
     </div>
   );

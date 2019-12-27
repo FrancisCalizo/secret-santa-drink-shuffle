@@ -15,6 +15,9 @@ const Fools = ({ amount, fools, setFools, history }) => {
   const submitFools = e => {
     e.preventDefault();
 
+    if (fools.length < amount || fools.includes("")) {
+      return alert("No blanks allowed Jabroni");
+    }
     history.push("/santaresults");
   };
 

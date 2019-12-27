@@ -1,7 +1,7 @@
-import React from 'react';
-import { withRouter } from 'react-router-dom';
-import { useEffect } from 'react';
-import WhiteElephant from './WhiteElephant';
+import React from "react";
+import { withRouter } from "react-router-dom";
+import { useEffect } from "react";
+import WhiteElephant from "./WhiteElephant";
 
 const Amount = ({
   history,
@@ -11,7 +11,7 @@ const Amount = ({
   setIsWhiteElephant
 }) => {
   useEffect(() => {
-    setElephantAmount('0');
+    setElephantAmount("0");
     // eslint-disable-next-line
   }, []);
 
@@ -19,21 +19,24 @@ const Amount = ({
     e.preventDefault();
 
     if (Number(elephantAmount) < 1) {
-      alert('Input a Number you Jabroni');
+      alert("Input a Number you Jabroni");
     } else {
-      history.push('/elephantpicking');
+      history.push("/elephantpicking");
     }
   };
 
   const handleGameChange = () => {
     setIsWhiteElephant(false);
-    history.push('/');
+    history.push("/");
   };
 
   const amountFocus = e => e.target.select();
 
   return (
     <div className="text-center">
+      <h6 style={{ marginTop: "1rem" }}>
+        Click Santa to change the game to Secret Santa!
+      </h6>
       <WhiteElephant handleGameChange={handleGameChange} />
       <form onSubmit={submitAmount}>
         <div className="card amount-fools-card">
@@ -47,7 +50,7 @@ const Amount = ({
                 onFocus={amountFocus}
                 onChange={handleElephantAmount}
                 value={Number(elephantAmount)}
-                style={{ margin: '0' }}
+                style={{ margin: "0" }}
               />
             </div>
           </label>

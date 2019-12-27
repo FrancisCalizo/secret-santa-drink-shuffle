@@ -45,7 +45,11 @@ const ElephantPicking = ({ elephantAmount }) => {
       )}
 
       <h3 style={{ color: "#7f8c8d" }}>Press Palpatine to draw a number.</h3>
-      <button onClick={randomSelection} className="sideous my-1">
+      <button
+        onClick={randomSelection}
+        className="sideous my-1"
+        style={{ cursor: "pointer" }}
+      >
         Dew it.
       </button>
       <div className="grid-2">

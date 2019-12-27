@@ -379,7 +379,7 @@ table th {
 
 /* Navbar */
 .navbar {
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
   padding: 0.7rem 2rem;
@@ -390,7 +390,7 @@ table th {
 }
 
 .navbar ul {
-  display: flex;
+  display: block;
 }
 
 .navbar a {
