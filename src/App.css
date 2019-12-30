@@ -116,6 +116,7 @@ img {
   padding: 1rem;
   border: #ccc 1px dotted;
   margin: 0.7rem 0;
+  max-width: 500px;
 }
 
 .card-shadow {
@@ -123,6 +124,7 @@ img {
   padding: 1rem;
   border: #ccc 1px dotted;
   margin: 0.7rem 0;
+  max-width: 500px;
 }
 
 /* List */
@@ -481,6 +483,7 @@ table th {
   margin: 0 auto;
   padding: 0;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  max-width: 500px;
 }
 
 .amount-fools-card label {
@@ -501,6 +504,7 @@ table th {
   font-size: 1.2rem;
   padding: 0.6rem 1rem;
   /* border-radius: 30px; */
+  max-width: 500px;
 }
 
 .spoken {
@@ -508,6 +512,7 @@ table th {
   font-size: 1.2rem;
   padding: 0.6rem 3rem;
   width: 90%;
+  max-width: 500px;
 }
 
 /* Input Number Arrow Hide */

@@ -36,9 +36,9 @@ const Results = ({ amount, fools }) => {
       <div
         className="card"
         style={{
-          width: "80%",
-          marginLeft: "10%",
-          marginRight: "10%",
+          width: "90%",
+          marginLeft: "auto",
+          marginRight: "auto",
           border: "none",
           boxShadow:
             " 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"
@@ -55,8 +55,15 @@ const Results = ({ amount, fools }) => {
           );
         })}
       </div>
-      <div className="grid-2 justify-center">
-        <button onClick={handleRedo} className="btn-dark shuffle my-1">
+      <div
+        className="grid-2 justify-center"
+        style={{ maxWidth: "500px", marginLeft: "auto", marginRight: "auto" }}
+      >
+        <button
+          onClick={handleRedo}
+          className="btn-dark shuffle my-1"
+          style={{ maxWidth: "200px" }}
+        >
           Reshuffle
         </button>
         <Link to="/" className="btn-primary shuffle my-1">

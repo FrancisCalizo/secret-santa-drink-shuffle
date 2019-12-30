@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from "react";
+import React, { useState, useEffect } from "react";
 
 const ElephantPicking = ({ elephantAmount }) => {
   const [remaining, setRemaining] = useState([]);
@@ -52,7 +52,10 @@ const ElephantPicking = ({ elephantAmount }) => {
       >
         Dew it.
       </button>
-      <div className="grid-2">
+      <div
+        className="grid-2"
+        style={{ maxWidth: "500px", marginLeft: "auto", marginRight: "auto" }}
+      >
         <div className="card-shadow">
           <h2>Remaining</h2>
           <div className="grid-2">
