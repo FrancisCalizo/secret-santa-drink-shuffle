@@ -14,6 +14,7 @@ const App = props => {
   const [fools, setFools] = useState([]);
   const [isWhiteElephant, setIsWhiteElephant] = useState(false);
   const [elephantAmount, setElephantAmount] = useState("0");
+  const [error, setError] = useState("");
 
   const handleAmount = e => setAmount(e.target.value);
   const handleElephantAmount = e => setElephantAmount(e.target.value);
@@ -32,6 +33,8 @@ const App = props => {
               setAmount={setAmount}
               setFools={setFools}
               setIsWhiteElephant={setIsWhiteElephant}
+              setError={setError}
+              error={error}
             />
           )}
         />

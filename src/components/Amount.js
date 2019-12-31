@@ -10,7 +10,9 @@ const Amount = ({
   setAmount,
   handleAmount,
   setFools,
-  setIsWhiteElephant
+  setIsWhiteElephant,
+  error,
+  setError
 }) => {
   useEffect(() => {
     setAmount("0");
@@ -22,7 +24,8 @@ const Amount = ({
     e.preventDefault();
 
     if (Number(amount) < 1) {
-      alert("Input a Number you bafoon");
+      setError("Input a Number you bafoon!");
+      // alert("Input a Number you bafoon");
     } else {
       history.push("/foolnames");
     }
@@ -58,6 +61,7 @@ const Amount = ({
             </div>
           </label>
         </div>
+        {error}
         <div>
           <input
             type="submit"
