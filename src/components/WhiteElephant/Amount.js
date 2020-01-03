@@ -1,17 +1,20 @@
-import React from "react";
-import { withRouter } from "react-router-dom";
-import { useEffect } from "react";
-import WhiteElephant from "./WhiteElephant";
+import React from 'react';
+import { withRouter } from 'react-router-dom';
+import { useEffect } from 'react';
+import WhiteElephant from './WhiteElephant';
 
 const Amount = ({
   history,
   elephantAmount,
   setElephantAmount,
   handleElephantAmount,
-  setIsWhiteElephant
+  setIsWhiteElephant,
+  error,
+  setError
 }) => {
   useEffect(() => {
-    setElephantAmount("0");
+    setElephantAmount('0');
+    setError('');
     // eslint-disable-next-line
   }, []);
 
@@ -19,25 +22,27 @@ const Amount = ({
     e.preventDefault();
 
     if (Number(elephantAmount) < 1) {
-      alert("Input a Number you Jabroni");
+      setError('Input a Number you Jabroni!');
     } else {
-      history.push("/elephantpicking");
+      setError('');
+      history.push('/elephantpicking');
     }
   };
 
   const handleGameChange = () => {
     setIsWhiteElephant(false);
-    history.push("/");
+    history.push('/');
   };
 
   const amountFocus = e => e.target.select();
 
   return (
     <div className="text-center">
-      <h6 style={{ marginTop: "1rem" }}>
+      <h6 style={{ marginTop: '1rem' }}>
         Click Santa to change the game to Secret Santa!
       </h6>
       <WhiteElephant handleGameChange={handleGameChange} />
+      <div style={{ color: '#dc3545', fontSize: '1.2rem' }}>{error}</div>
       <form onSubmit={submitAmount}>
         <div className="card amount-fools-card">
           <label>
@@ -50,7 +55,7 @@ const Amount = ({
                 onFocus={amountFocus}
                 onChange={handleElephantAmount}
                 value={Number(elephantAmount)}
-                style={{ margin: "0" }}
+                style={{ margin: '0' }}
               />
             </div>
           </label>

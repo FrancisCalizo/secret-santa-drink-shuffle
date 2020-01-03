@@ -1,20 +1,20 @@
-import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Amount from "./components/Amount";
-import Fools from "./components/Fools";
-import Results from "./components/Results";
-import WhiteElephantAmount from "./components/WhiteElephant/Amount";
-import WhiteElephantNavbar from "./components/WhiteElephant/Navbar";
-import ElephantPicking from "./components/WhiteElephant/ElephantPicking";
-import "./App.css";
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Amount from './components/Amount';
+import Fools from './components/Fools';
+import Results from './components/Results';
+import WhiteElephantAmount from './components/WhiteElephant/Amount';
+import WhiteElephantNavbar from './components/WhiteElephant/Navbar';
+import ElephantPicking from './components/WhiteElephant/ElephantPicking';
+import './App.css';
 
 const App = props => {
-  const [amount, setAmount] = useState("0");
+  const [amount, setAmount] = useState('0');
   const [fools, setFools] = useState([]);
   const [isWhiteElephant, setIsWhiteElephant] = useState(false);
-  const [elephantAmount, setElephantAmount] = useState("0");
-  const [error, setError] = useState("");
+  const [elephantAmount, setElephantAmount] = useState('0');
+  const [error, setError] = useState('');
 
   const handleAmount = e => setAmount(e.target.value);
   const handleElephantAmount = e => setElephantAmount(e.target.value);
@@ -42,7 +42,13 @@ const App = props => {
           exact
           path="/foolnames"
           render={({ history }, props) => (
-            <Fools amount={amount} fools={fools} setFools={setFools} />
+            <Fools
+              amount={amount}
+              fools={fools}
+              setFools={setFools}
+              setError={setError}
+              error={error}
+            />
           )}
         />
         <Route
@@ -59,6 +65,8 @@ const App = props => {
               elephantAmount={elephantAmount}
               setElephantAmount={setElephantAmount}
               setIsWhiteElephant={setIsWhiteElephant}
+              setError={setError}
+              error={error}
             />
           )}
         />
