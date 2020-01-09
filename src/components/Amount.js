@@ -1,8 +1,8 @@
-import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom';
-import { useEffect } from 'react';
-import DrunkSanta from './DrunkSanta';
+import React from "react";
+import PropTypes from "prop-types";
+import { withRouter } from "react-router-dom";
+import { useEffect } from "react";
+import DrunkSanta from "./DrunkSanta";
 
 const Amount = ({
   history,
@@ -15,9 +15,9 @@ const Amount = ({
   setError
 }) => {
   useEffect(() => {
-    setAmount('0');
+    setAmount("0");
     setFools([]);
-    setError('');
+    setError("");
     // eslint-disable-next-line
   }, []);
 
@@ -25,27 +25,27 @@ const Amount = ({
     e.preventDefault();
 
     if (Number(amount) < 1) {
-      setError('Input a Number you bafoon!');
+      setError("Input a Number you bafoon!");
     } else {
-      setError('');
-      history.push('/foolnames');
+      setError("");
+      history.push("/foolnames");
     }
   };
 
   const handleGameChange = () => {
     setIsWhiteElephant(true);
-    history.push('/whiteelephant');
+    history.push("/whiteelephant");
   };
 
   const amountFocus = e => e.target.select();
 
   return (
     <div className="text-center">
-      <h6 style={{ marginTop: '1rem' }}>
+      <h6 style={{ marginTop: "1rem" }}>
         Click Santa to change the game to White Elephant!
       </h6>
       <DrunkSanta handleGameChange={handleGameChange} />
-      <div style={{ color: '#dc3545', fontSize: '1.2rem' }}>{error}</div>
+      <div style={{ color: "#dc3545", fontSize: "1.2rem" }}>{error}</div>
       <form onSubmit={submitAmount}>
         <div className="card amount-fools-card">
           <label>
@@ -58,7 +58,7 @@ const Amount = ({
                 onFocus={amountFocus}
                 onChange={handleAmount}
                 value={Number(amount)}
-                style={{ margin: '0' }}
+                style={{ margin: "0" }}
               />
             </div>
           </label>

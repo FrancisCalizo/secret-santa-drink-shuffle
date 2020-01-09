@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const WhiteElephantImage = styled.img`
   cursor: pointer;
@@ -9,15 +9,8 @@ const WhiteElephantImage = styled.img`
 const WhiteElephant = ({ handleGameChange }) => {
   return (
     <div>
-      {/* <img
-        id="white-elephant"
-        src={require('../../santa-dab.png')}
-        alt="white-elephant"
-        onClick={handleGameChange}
-        style={{ cursor: 'pointer' }}
-      /> */}
       <WhiteElephantImage
-        src={require('../../santa-dab.png')}
+        src={require("../../santa-dab.png")}
         alt="white-elephant"
         onClick={handleGameChange}
       />
