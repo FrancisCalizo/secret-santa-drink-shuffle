@@ -363,11 +363,6 @@ textarea {
   font-size: 1.2rem;
   border: 1px solid #ccc;
 }
-/*
-input[type='submit'],
-button {
-  font: inherit;
-} */
 
 table th,
 table td {
@@ -497,17 +492,6 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
-.fool-input {
-  margin: 0.5rem;
-  display: block;
-  width: 70%;
-  padding: 0.6rem;
-  font-size: 1.1rem;
-  border: 2px solid #ccc;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .justify-center {
   justify-content: center;
   justify-items: center;
@@ -522,7 +506,6 @@ button:focus {
 
 .sideous {
   background-image: url("../src/sidious.jpg");
-  /* background-size: cover; */
   background-position: 40% 50%;
   background-size: 150%;
   width: 150px;

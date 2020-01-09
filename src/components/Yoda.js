@@ -1,10 +1,17 @@
 import React from "react";
+import styled from "styled-components";
+
+const S = {
+  Div: styled.div`
+    margin: 1rem 0;
+  `
+};
 
 const Yoda = () => {
   return (
-    <div className="my-1">
+    <S.Div>
       <img id="yoda" src={require("../Yoda-L.gif")} alt="Yoda-handing-L's" />
-    </div>
+    </S.Div>
   );
 };
 
