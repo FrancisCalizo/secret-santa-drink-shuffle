@@ -8,11 +8,12 @@ Each person would purchase their drink of choice at the bar (it can be a shot, b
 I created this app because I no longer wanted to be primitive asking the waiters/waitresses for pens and tearing up their napkins and throwing it into dirty bowls, it can now be done all on your phone! I also created a White Elephant version, because why not.
 
 ## Technologies Used..
-Create-React-App
-React-Router-DOM
-React-Hooks
-Styled-Components
-
+<ul>
+  <li>ReactJS (Create-React-App)</li>
+  <li>React-Router-DOM</li>
+  <li>React-Hooks</li>
+  <li>Styled-Components</li>
+</ul>
 
 ## Helpful Articles Along the Way..
 
