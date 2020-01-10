@@ -4,13 +4,16 @@ import styled from "styled-components";
 const S = {
   Div: styled.div`
     margin: 1rem 0;
+  `,
+  YodaImage: styled.img`
+    width: 20rem;
   `
 };
 
 const Yoda = () => {
   return (
     <S.Div>
-      <img id="yoda" src={require("../Yoda-L.gif")} alt="Yoda-handing-L's" />
+      <S.YodaImage src={require("../Yoda-L.gif")} alt="Yoda-handing-L's" />
     </S.Div>
   );
 };

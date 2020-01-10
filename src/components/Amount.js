@@ -3,6 +3,24 @@ import PropTypes from "prop-types";
 import { withRouter } from "react-router-dom";
 import { useEffect } from "react";
 import DrunkSanta from "./DrunkSanta";
+import styled from "styled-components";
+import { GS, colors } from "./Styles";
+
+const S = {};
+
+S.H6 = styled.h6`
+  margin-top: 1rem;
+`;
+
+S.Error = styled.div`
+  font-size: 1.2rem;
+  color: ${colors.primary};
+`;
+
+S.Submit = styled(GS.SubmitAmountButton)`
+  background: ${colors.primary}
+  color: #fff;
+`;
 
 const Amount = ({
   history,
@@ -41,13 +59,11 @@ const Amount = ({
 
   return (
     <div className="text-center">
-      <h6 style={{ marginTop: "1rem" }}>
-        Click Santa to change the game to White Elephant!
-      </h6>
+      <S.H6>Click Santa to change the game to White Elephant!</S.H6>
       <DrunkSanta handleGameChange={handleGameChange} />
-      <div style={{ color: "#dc3545", fontSize: "1.2rem" }}>{error}</div>
+      <S.Error>{error}</S.Error>
       <form onSubmit={submitAmount}>
-        <div className="card amount-fools-card">
+        <GS.AmountFoolsCard>
           <label>
             Fool Count:
             <div>
@@ -62,13 +78,9 @@ const Amount = ({
               />
             </div>
           </label>
-        </div>
+        </GS.AmountFoolsCard>
         <div>
-          <input
-            type="submit"
-            value="I have spoken."
-            className="btn-primary spoken"
-          />
+          <S.Submit type="submit" value="I have spoken." />
         </div>
       </form>
     </div>

@@ -437,51 +437,6 @@ table th {
   }
 }
 
-#yoda {
-  width: 20rem;
-}
-
-/* #white-elephant {
-  width: 18rem;
-} */
-
-.amount-fools-card {
-  width: 90%;
-  margin: 0 auto;
-  padding: 0;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  max-width: 500px;
-}
-
-.amount-fools-card label {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.amount-fools-card input[type="number"] {
-  font-size: 3rem;
-  width: 6rem;
-  text-align: center;
-  border: none;
-}
-
-.the-way,
-.shuffle {
-  width: 80%;
-  font-size: 1.2rem;
-  padding: 0.6rem 1rem;
-  /* border-radius: 30px; */
-  max-width: 500px;
-}
-
-.spoken {
-  -webkit-appearance: none;
-  font-size: 1.2rem;
-  padding: 0.6rem 3rem;
-  width: 90%;
-  max-width: 500px;
-}
-
 /* Input Number Arrow Hide */
 input[type="number"] {
   -moz-appearance: textfield;
@@ -490,11 +445,6 @@ input[type="number"] {
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
-}
-
-.justify-center {
-  justify-content: center;
-  justify-items: center;
 }
 
 input:focus,

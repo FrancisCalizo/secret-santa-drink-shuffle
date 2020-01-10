@@ -4,15 +4,12 @@ import PropTypes from "prop-types";
 import Mando from "./Mando";
 import { withRouter } from "react-router-dom";
 import styled from "styled-components";
+import { colors, GS } from "./Styles";
 
 const S = {
-  FoolGroup: styled.div`
+  FoolGroup: styled(GS.CardShadow)`
     width: 80%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    padding: 1rem;
-    border: #ccc 1px dotted;
     margin: 0.7rem auto;
-    max-width: 500px;
   `,
   Error: styled.div`
     color: #dc3545;
@@ -23,6 +20,8 @@ const S = {
     font-size: 1.2rem;
     padding: 0.6rem 1rem;
     max-width: 500px;
+    background: ${colors.primary};
+    color: #fff;
   `
 };
 
@@ -58,11 +57,7 @@ const Fools = ({ amount, fools, setFools, history, error, setError }) => {
             ))}
         </S.FoolGroup>
         <div>
-          <S.Submit
-            type="submit"
-            value="This is the way."
-            className="btn-primary"
-          />
+          <S.Submit type="submit" value="This is the way." />
         </div>
       </form>
     </div>

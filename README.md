@@ -20,3 +20,13 @@
 and https://codepen.io/michellebarker/post/experimental-layouts-with-css-shapes-and-clip-path
 
 <b> Create an Array of Numbers 1-N just from getting the value N </b> - https://stackoverflow.com/questions/3746725/how-to-create-an-array-containing-1-n
+
+<b>Styled Components: Extend styles and change the element Type (used for React Router Links) - </b> https://stackoverflow.com/questions/55776961/styled-components-extend-styles-and-change-element-type
+
+<b> Basic Implementation of React Router and Styled Components (Links) </b> - https://codesandbox.io/s/zkxp2mxwq
+
+<b> Naming Conventions with Styled Components and using an Object to hold the Styles </b> - https://dev.to/sandro_roth/how-to-structure-styled-components-with-react-and-ts-27pn
+
+<b> Using "Global" styled components to import (Scott Tolinski's website) </b> - https://github.com/stolinski/ScottTolinski.com/blob/master/src/components/AboutStyles.js
+
+<b> A "CSS Variables" Work Around with Styled Components </b> - https://github.com/stolinski/ScottTolinski.com/blob/master/src/components/Headings.js
