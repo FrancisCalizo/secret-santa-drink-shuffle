@@ -13,6 +13,7 @@ I created this app because I no longer wanted to be primitive asking the waiters
   <li>React-Router-DOM</li>
   <li>React-Hooks</li>
   <li>Styled-Components</li>
+  <li>State is passed through props the useState() hook (No useContext(), no Redux, no useReducer())
 </ul>
 
 ## Helpful Articles Along the Way..
