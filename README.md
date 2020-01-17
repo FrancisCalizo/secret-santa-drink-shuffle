@@ -1,7 +1,7 @@
 ## The Secret Santa | White Elephant Drinking Game!
 A ReactJS application used to play your favorite holiday game, but with a twist! A little backstory...
 
-During the holiday season, my frends and I would gather at a local bar to grab a few drinks. Feeling festive one night, I asked them if they wanted to do some sort of "Secret-Santa-Style" drinking game, which would later become a (regrettable) tradition. 
+During the holiday season, my friends and I would gather at a local bar to grab a few drinks. Feeling festive one night, I asked them if they wanted to do some sort of "Secret-Santa-Style" drinking game, which would later become a (regrettable) tradition. 
 
 Each person would purchase their drink of choice at the bar (it can be a shot, beer, mixed drink, whatever) and without telling anyone else what it is, set it on the table that we were seated at. Once everyone purchased a drink, we would line up the drinks and number them 1 through however many drinks there were. We would then write down each number on a napkin, mix them up in a bowl, and then randomly pick a number each. The number that was dealt to you corresponds to the drink you must take, and it was bottoms up from there.
 
