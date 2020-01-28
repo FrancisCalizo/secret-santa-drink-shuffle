@@ -1,10 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { withRouter } from "react-router-dom";
-import { useEffect } from "react";
-import DrunkSanta from "./DrunkSanta";
-import styled from "styled-components";
-import { GS, colors } from "./Styles";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
+import { useEffect } from 'react';
+import DrunkSanta from './DrunkSanta';
+import styled from 'styled-components';
+import { GS, colors } from './Styles';
 
 const S = {};
 
@@ -20,6 +20,7 @@ S.Error = styled.div`
 S.Submit = styled(GS.SubmitAmountButton)`
   background: ${colors.primary}
   color: #fff;
+  cursor: pointer;
 `;
 
 const Amount = ({
@@ -33,9 +34,9 @@ const Amount = ({
   setError
 }) => {
   useEffect(() => {
-    setAmount("0");
+    setAmount('0');
     setFools([]);
-    setError("");
+    setError('');
     // eslint-disable-next-line
   }, []);
 
@@ -43,16 +44,16 @@ const Amount = ({
     e.preventDefault();
 
     if (Number(amount) < 1) {
-      setError("Input a Number you bafoon!");
+      setError('Input a Number you bafoon!');
     } else {
-      setError("");
-      history.push("/foolnames");
+      setError('');
+      history.push('/foolnames');
     }
   };
 
   const handleGameChange = () => {
     setIsWhiteElephant(true);
-    history.push("/whiteelephant");
+    history.push('/whiteelephant');
   };
 
   const amountFocus = e => e.target.select();
@@ -74,7 +75,7 @@ const Amount = ({
                 onFocus={amountFocus}
                 onChange={handleAmount}
                 value={Number(amount)}
-                style={{ margin: "0" }}
+                style={{ margin: '0' }}
               />
             </div>
           </label>

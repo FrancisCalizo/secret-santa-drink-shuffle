@@ -1,10 +1,10 @@
-import React from "react";
-import FoolItem from "./FoolItem";
-import PropTypes from "prop-types";
-import Mando from "./Mando";
-import { withRouter } from "react-router-dom";
-import styled from "styled-components";
-import { colors, GS } from "./Styles";
+import React from 'react';
+import FoolItem from './FoolItem';
+import PropTypes from 'prop-types';
+import Mando from './Mando';
+import { withRouter } from 'react-router-dom';
+import styled from 'styled-components';
+import { colors, GS } from './Styles';
 
 const S = {
   FoolGroup: styled(GS.CardShadow)`
@@ -22,6 +22,7 @@ const S = {
     max-width: 500px;
     background: ${colors.primary};
     color: #fff;
+    cursor: pointer;
   `
 };
 
@@ -36,11 +37,11 @@ const Fools = ({ amount, fools, setFools, history, error, setError }) => {
   const submitFools = e => {
     e.preventDefault();
 
-    if (fools.length < amount || fools.includes("")) {
-      return setError("No blanks allowed Jabroni");
+    if (fools.length < amount || fools.includes('')) {
+      return setError('No blanks allowed Jabroni');
     }
-    setError("");
-    history.push("/santaresults");
+    setError('');
+    history.push('/santaresults');
   };
 
   return (

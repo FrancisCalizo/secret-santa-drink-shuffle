@@ -1,15 +1,16 @@
-import React from "react";
-import { withRouter } from "react-router-dom";
-import { useEffect } from "react";
-import WhiteElephant from "./WhiteElephant";
-import styled from "styled-components";
-import { GS, colors } from "../Styles";
+import React from 'react';
+import { withRouter } from 'react-router-dom';
+import { useEffect } from 'react';
+import WhiteElephant from './WhiteElephant';
+import styled from 'styled-components';
+import { GS, colors } from '../Styles';
 
 const S = {};
 
 S.Submit = styled(GS.SubmitAmountButton)`
   background: ${colors.elephant}
   color: #fff;
+  cursor: pointer;
 `;
 
 const Amount = ({
@@ -22,8 +23,8 @@ const Amount = ({
   setError
 }) => {
   useEffect(() => {
-    setElephantAmount("0");
-    setError("");
+    setElephantAmount('0');
+    setError('');
     // eslint-disable-next-line
   }, []);
 
@@ -31,27 +32,27 @@ const Amount = ({
     e.preventDefault();
 
     if (Number(elephantAmount) < 1) {
-      setError("Input a Number you Jabroni!");
+      setError('Input a Number you Jabroni!');
     } else {
-      setError("");
-      history.push("/elephantpicking");
+      setError('');
+      history.push('/elephantpicking');
     }
   };
 
   const handleGameChange = () => {
     setIsWhiteElephant(false);
-    history.push("/");
+    history.push('/');
   };
 
   const amountFocus = e => e.target.select();
 
   return (
     <div className="text-center">
-      <h6 style={{ marginTop: "1rem" }}>
+      <h6 style={{ marginTop: '1rem' }}>
         Click Santa to change the game to Secret Santa!
       </h6>
       <WhiteElephant handleGameChange={handleGameChange} />
-      <div style={{ color: "#dc3545", fontSize: "1.2rem" }}>{error}</div>
+      <div style={{ color: '#dc3545', fontSize: '1.2rem' }}>{error}</div>
       <form onSubmit={submitAmount}>
         <GS.AmountFoolsCard>
           <label>
@@ -64,7 +65,7 @@ const Amount = ({
                 onFocus={amountFocus}
                 onChange={handleElephantAmount}
                 value={Number(elephantAmount)}
-                style={{ margin: "0" }}
+                style={{ margin: '0' }}
               />
             </div>
           </label>
